@@ -1,0 +1,8 @@
+<p>lesson-four-image works!</p>
+<p [innerText]='productName'></p>
+<img [src]="productImage" width="300"/>
+
+<p>Notice that the binding is to the disabled property of the button's DOM element, not the attribute. This applies to data-binding in general. Data-binding works with properties of DOM elements, components, and directives, not HTML attributes.</p>
+<p> A button's disabled property is false by default so the button is enabled.</p>
+<button [disabled]="disabled" (click)="btnClick()">Save Changes</button>
+
