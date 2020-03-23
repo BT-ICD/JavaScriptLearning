@@ -1,0 +1,18 @@
+<p>lesson-six-radiobutton works!</p>
+<p><input type="radio" name="Course" value="1" (change)="onSelectedCourseChange($event)" checked><label>BCA</label></p>
+<p><input type="radio" name="Course" value="2" (change)="onSelectedCourseChange($event)" ><label>MCA</label></p>
+<p><input type="radio" name="Course" value="3" (change)="onSelectedCourseChange($event)"><label>MS IT</label></p>
+<p>{{selectedCourse}} - {{selectedCourseName}}</p>
+<button (click)="getSelectedOptionButtonClick()" name="selectedOptionButton">Get Selected Option Button</button>
+<div>Subscribe to Angular Channel:
+    <p><input type="radio" value="1" name="subscriptionSelection" (change)="onSubscriptionSelectionChange($event)" checked>Yes</p>
+    <p><input type="radio" value="0" name="subscriptionSelection" (change)="onSubscriptionSelectionChange($event)">No</p>
+</div>
+<p>Subscription Status: {{subscriptionSelectionStatus}}</p>
+<div *ngIf="subscriptionSelectionStatus; then thenBlock else elseBlock" >
+
+</div>
+<ng-template #thenBlock>
+Thank you for subscription. 
+</ng-template>
+<ng-template #elseBlock>Thank you!</ng-template>

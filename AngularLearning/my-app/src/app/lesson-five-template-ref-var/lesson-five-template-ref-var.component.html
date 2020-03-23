@@ -1,0 +1,11 @@
+<p>lesson-five-template-ref-var works!</p>
+<p>Value 1: <input type="text" value="10" #txtValue1></p>
+<p>Value 2: <input type="text" value="10" #txtValue2></p>
+<p>
+    <button (click) ="additionButtonClick(txtValue1.value, txtValue2.value)">Addition</button>
+    <button (click) ="subtractionButtonClick(txtValue1.value, txtValue2.value)">Subtraction</button>
+    <button (click) ="multiplicationButtonClick(txtValue1.value, txtValue2.value)">Multiplication</button>
+    <button (click) ="divisionButtonClick(txtValue1.value, txtValue2.value)">Division</button>
+    <button (click) ="clearButtonClick(txtValue1, txtValue2)">Clear</button>
+</p>
+<p>Answer: <input type="text" value={{answer}}></p>
