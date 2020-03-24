@@ -13,6 +13,7 @@ import { LessonFourImageComponent } from './lesson-four-image/lesson-four-image.
 import { LessonFiveTemplateRefVarComponent } from './lesson-five-template-ref-var/lesson-five-template-ref-var.component';
 import { LessonSixRadiobuttonComponent } from './lesson-six-radiobutton/lesson-six-radiobutton.component';
 import { LessonSevenHttpStudentComponent } from './lesson-seven-http-student/lesson-seven-http-student.component';
+import { LessonEightHttpCustomerComponent } from './lesson-eight-http-customer/lesson-eight-http-customer.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { LessonSevenHttpStudentComponent } from './lesson-seven-http-student/les
     LessonFourImageComponent,
     LessonFiveTemplateRefVarComponent,
     LessonSixRadiobuttonComponent,
-    LessonSevenHttpStudentComponent
+    LessonSevenHttpStudentComponent,
+    LessonEightHttpCustomerComponent
     
   ],
   imports: [

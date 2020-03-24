@@ -3,7 +3,6 @@ import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { IStudent } from './student';
 import { Observable, throwError } from 'rxjs';
 import {catchError, tap} from 'rxjs/operators'
-import { $ } from 'protractor';
 
 @Injectable({
     providedIn:'root'
