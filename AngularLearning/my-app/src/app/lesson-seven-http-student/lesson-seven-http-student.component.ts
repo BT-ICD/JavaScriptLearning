@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {IStudent} from './student'
 import { StudentService } from './lesson-seven-http-student.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -19,7 +20,7 @@ export class LessonSevenHttpStudentComponent implements OnInit {
     {"id":103,"sName":'Harsh'},
     {"id":104,"sName":'Manali'}
   ];
-  constructor(private studentService:StudentService) { 
+  constructor(private studentService:StudentService, private router:Router) { 
     this.pageTitle="Student List";
     this.listFilter='';
   }
@@ -30,6 +31,9 @@ export class LessonSevenHttpStudentComponent implements OnInit {
         error:err=>this.errorMessage=err
       }
     ); 
+  }
+  openL8HttpComponent(){
+this.router.navigate(['/L8']);
   }
   
 }

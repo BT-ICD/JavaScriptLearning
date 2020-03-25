@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LessonEightHttpCustomerServiceService } from './lesson-eight-http-customer-service.service';
 import { ICustomer } from './customer';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lesson-eight-http-customer',
@@ -12,7 +13,7 @@ export class LessonEightHttpCustomerComponent implements OnInit {
   errorMessage:string;
   customerList:ICustomer[];
   customerListFromWeb:ICustomer[];
-  constructor(private customerService:LessonEightHttpCustomerServiceService) {
+  constructor(private customerService:LessonEightHttpCustomerServiceService, private route:Router) {
     this.pageTitle='Customer List';
     this.listFilter='';
     this.customerList = customerService.getCustomerListFix();
@@ -26,6 +27,9 @@ export class LessonEightHttpCustomerComponent implements OnInit {
   }
   logCustomerList(){
     console.log(this.customerList);
+  }
+  openL7HttpComponent(){
+    this.route.navigate(['L7']);
   }
 
 }
