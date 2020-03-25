@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import {RouterModule} from '@angular/router'
 import { AppComponent } from './app.component';
 
 import { AdditionComponent } from './addition/addition.component';
@@ -33,8 +34,20 @@ import { LessonEightHttpCustomerComponent } from './lesson-eight-http-customer/l
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
-
+    HttpClientModule,
+    RouterModule.forRoot([
+        {path:'L1',component:LessonOneComponent},
+        {path:'L2',component:LessonTwoComponent},
+        {path:'L3',component:LessonThreeProductlistComponent},
+        {path:'L4',component:LessonFourImageComponent},
+        {path:'L5',component:LessonFiveTemplateRefVarComponent},
+        {path:'L6',component:LessonSixRadiobuttonComponent},
+        {path:'L7',component:LessonSevenHttpStudentComponent},
+        {path:'L8',component:LessonEightHttpCustomerComponent},
+        {path:'Home',component:AdditionComponent},
+        {path:'',redirectTo:'Home',pathMatch:'full'},
+        {path:'**',redirectTo:'Home',pathMatch:'full'}
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
