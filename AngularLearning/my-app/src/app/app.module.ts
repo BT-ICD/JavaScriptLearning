@@ -15,6 +15,8 @@ import { LessonFiveTemplateRefVarComponent } from './lesson-five-template-ref-va
 import { LessonSixRadiobuttonComponent } from './lesson-six-radiobutton/lesson-six-radiobutton.component';
 import { LessonSevenHttpStudentComponent } from './lesson-seven-http-student/lesson-seven-http-student.component';
 import { LessonEightHttpCustomerComponent } from './lesson-eight-http-customer/lesson-eight-http-customer.component';
+import { LessonNineObservableComponent } from './lesson-nine-observable/lesson-nine-observable.component';
+import { LessonTenRxJSOp1Component } from './lesson-ten-rx-jsop1/lesson-ten-rx-jsop1.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { LessonEightHttpCustomerComponent } from './lesson-eight-http-customer/l
     LessonFiveTemplateRefVarComponent,
     LessonSixRadiobuttonComponent,
     LessonSevenHttpStudentComponent,
-    LessonEightHttpCustomerComponent
+    LessonEightHttpCustomerComponent,
+    LessonNineObservableComponent,
+    LessonTenRxJSOp1Component
     
   ],
   imports: [
@@ -44,6 +48,8 @@ import { LessonEightHttpCustomerComponent } from './lesson-eight-http-customer/l
         {path:'L6',component:LessonSixRadiobuttonComponent},
         {path:'L7',component:LessonSevenHttpStudentComponent},
         {path:'L8',component:LessonEightHttpCustomerComponent},
+        {path:'L9',component:LessonNineObservableComponent},
+        {path:'L10', component:LessonTenRxJSOp1Component},
         {path:'Home',component:AdditionComponent},
         {path:'',redirectTo:'Home',pathMatch:'full'},
         {path:'**',redirectTo:'Home',pathMatch:'full'}
