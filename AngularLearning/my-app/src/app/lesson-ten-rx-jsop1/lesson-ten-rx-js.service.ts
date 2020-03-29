@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { ValueTransformer } from '@angular/compiler/src/util';
-
 @Injectable({
   providedIn: 'root'
 })
@@ -10,11 +8,7 @@ export class LessonTenRxJsService {
   subscriber.next(1);
   subscriber.next(2);
   subscriber.next(3);
-  setTimeout(()=>{
-    subscriber.next(4);
-    subscriber.complete(); //
-    },1000);
-  
+  subscriber.complete();
 });
 
     constructor() { }

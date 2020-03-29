@@ -43,5 +43,6 @@ observableButton2Click(){
   RxJSOperatorButton1Click(){
     this.route.navigate(['/L10']);
   }
+  
 }
 

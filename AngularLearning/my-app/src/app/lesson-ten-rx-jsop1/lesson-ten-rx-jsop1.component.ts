@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LessonTenRxJsService } from './lesson-ten-rx-js.service';
+import { filter, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-lesson-ten-rx-jsop1',
@@ -30,5 +31,18 @@ export class LessonTenRxJSOp1Component implements OnInit {
       complete:()=>console.log('Complete')
     });
   }
-
+  obsButtonFilterClick(){
+    this.lessonTenRxJsService.getNumOfIntValuesUsingOf().pipe(
+      filter(i=>i%2===0)
+    ).subscribe({
+      next:data=>console.log(data)
+    });
+  }
+  opButtonMapClick(){
+    this.lessonTenRxJsService.getNumOfIntValuesUsingOf().pipe(
+      map(i=>i*10)
+    ).subscribe({
+      next:data=>console.log(data)
+    });
+  }
 }
