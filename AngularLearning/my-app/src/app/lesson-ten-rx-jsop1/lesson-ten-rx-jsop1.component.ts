@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LessonTenRxJsService } from './lesson-ten-rx-js.service';
-import { filter, map } from 'rxjs/operators';
+import { filter, map, tap, take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-lesson-ten-rx-jsop1',
@@ -43,6 +43,22 @@ export class LessonTenRxJSOp1Component implements OnInit {
       map(i=>i*10)
     ).subscribe({
       next:data=>console.log(data)
+    });
+  }
+  opButtonTapClick(){
+    this.lessonTenRxJsService.getNumOfIntValues().pipe(
+      tap(item=>console.log(item)),
+      map(item=>item*2),
+      tap(item=>console.log(item))
+    ).subscribe({
+      next:item=>console.log('Final Item:' + item)
+    });
+  }
+  opButtonTakeClick(){
+    this.lessonTenRxJsService.getNumOfIntValuesUsingOf().pipe(
+      take(5)
+    ).subscribe({
+      next:item=>console.log(item)
     });
   }
 }
