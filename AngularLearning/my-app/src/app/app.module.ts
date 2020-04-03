@@ -4,7 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router'
 import { AppComponent } from './app.component';
-
 import { AdditionComponent } from './addition/addition.component';
 import { HeroeslistComponent } from './heroeslist/heroeslist.component';
 import { LessonOneComponent } from './lesson-one/lesson-one.component';
@@ -17,6 +16,7 @@ import { LessonSevenHttpStudentComponent } from './lesson-seven-http-student/les
 import { LessonEightHttpCustomerComponent } from './lesson-eight-http-customer/lesson-eight-http-customer.component';
 import { LessonNineObservableComponent } from './lesson-nine-observable/lesson-nine-observable.component';
 import { LessonTenRxJSOp1Component } from './lesson-ten-rx-jsop1/lesson-ten-rx-jsop1.component';
+import { LessonElevenTformsoneComponent } from './lesson-eleven-tformsone/lesson-eleven-tformsone.component';
 
 @NgModule({
   declarations: [
@@ -32,11 +32,13 @@ import { LessonTenRxJSOp1Component } from './lesson-ten-rx-jsop1/lesson-ten-rx-j
     LessonSevenHttpStudentComponent,
     LessonEightHttpCustomerComponent,
     LessonNineObservableComponent,
-    LessonTenRxJSOp1Component
+    LessonTenRxJSOp1Component,
+    LessonElevenTformsoneComponent
     
   ],
   imports: [
     BrowserModule,
+    
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot([
@@ -50,6 +52,7 @@ import { LessonTenRxJSOp1Component } from './lesson-ten-rx-jsop1/lesson-ten-rx-j
         {path:'L8',component:LessonEightHttpCustomerComponent},
         {path:'L9',component:LessonNineObservableComponent},
         {path:'L10', component:LessonTenRxJSOp1Component},
+        {path:'L11',component:LessonElevenTformsoneComponent},
         {path:'Home',component:AdditionComponent},
         {path:'',redirectTo:'Home',pathMatch:'full'},
         {path:'**',redirectTo:'Home',pathMatch:'full'}
