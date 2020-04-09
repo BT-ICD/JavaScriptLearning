@@ -30,7 +30,8 @@ customerListFix:ICustomer[]=[
       tap(data=>console.log('All: ' + JSON.stringify(data))),
       catchError(this.handleError)
     );
-  }
+
+      }
   private handleError(err:HttpErrorResponse){
     let errorMessage:string='';
     return throwError(errorMessage);

@@ -17,6 +17,8 @@ import { LessonEightHttpCustomerComponent } from './lesson-eight-http-customer/l
 import { LessonNineObservableComponent } from './lesson-nine-observable/lesson-nine-observable.component';
 import { LessonTenRxJSOp1Component } from './lesson-ten-rx-jsop1/lesson-ten-rx-jsop1.component';
 import { LessonElevenTformsoneComponent } from './lesson-eleven-tformsone/lesson-eleven-tformsone.component';
+import { LessonTwelveHttppostComponent } from './lesson-twelve-httppost/lesson-twelve-httppost.component';
+import { ServeraddComponent } from './lesson-twelve-httppost/serveradd.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { LessonElevenTformsoneComponent } from './lesson-eleven-tformsone/lesson
     LessonEightHttpCustomerComponent,
     LessonNineObservableComponent,
     LessonTenRxJSOp1Component,
-    LessonElevenTformsoneComponent
+    LessonElevenTformsoneComponent,
+    LessonTwelveHttppostComponent,
+    ServeraddComponent
     
   ],
   imports: [
@@ -53,6 +57,8 @@ import { LessonElevenTformsoneComponent } from './lesson-eleven-tformsone/lesson
         {path:'L9',component:LessonNineObservableComponent},
         {path:'L10', component:LessonTenRxJSOp1Component},
         {path:'L11',component:LessonElevenTformsoneComponent},
+        {path:'L12',component:LessonTwelveHttppostComponent},
+        {path:'L13', component:ServeraddComponent},
         {path:'Home',component:AdditionComponent},
         {path:'',redirectTo:'Home',pathMatch:'full'},
         {path:'**',redirectTo:'Home',pathMatch:'full'}

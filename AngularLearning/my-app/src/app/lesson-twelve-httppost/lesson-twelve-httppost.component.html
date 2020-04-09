@@ -1,0 +1,45 @@
+<div class="card">
+    <div class="card-header">
+        Server Type
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-2">Filter by:</div>
+            <div class="col-md-4">
+                <input type="text" placeholder="Filter by" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <button class="btn btn-primary" name="addNewButton" (click)="addNewButtonClick()">Add New</button>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <div class="table" *ngIf='serverTypeList'>
+                <thead>
+                    <tr>
+                        <td>Id</td>
+                        <td>Name</td>
+                        <td>Created By</td>
+                        <td>Created Date</td>
+                        <td>Edit</td>
+                        <td>Delete</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let serverType of serverTypeList">
+                        <td>{{serverType.serverTypeId}}</td>
+                        <td>{{serverType.name}}</td>
+                        <td>{{serverType.createdBy}}</td>
+                        <td>{{serverType.createdDateTime|date:'dd-MMM-yyyy'}}</td>
+                        <td><button class="btn btn-link" name="editButton"
+                                (click)="editButtonClick(serverType.serverTypeId)">Edit</button></td>
+                        <td><button class="btn btn-link" name="deleteButton"
+                                (click)="deleteButtonClick(serverType.serverTypeId)">Delete</button></td>
+                    </tr>
+                </tbody>
+            </div>
+        </div>
+    </div>
+</div>
+<button name="add" (click)="addButtonClick()" class="btn btn-primary">Add New Server Type</button>
