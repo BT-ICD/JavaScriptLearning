@@ -1,0 +1,28 @@
+<div class="card">
+    <div class="card-header">
+        <h4 class="card-title">Server Type</h4>
+    </div>
+    <div class="card-body">
+    <form #serverTypeForm="ngForm">
+
+        <div class="form-group">
+            <label for="serverTypeId">Id</label>
+            <input type="text" id="serverTypeId" name="serverTypeId" class="form-control" [(ngModel)]="serverTypeDTO.serverTypeId" readonly/>
+        </div>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" name="name" class="form-control" [(ngModel)]="serverTypeDTO.name"  />
+        </div>
+        <div class="form-group">
+            <label for="createdBy">Created By</label>
+            <select class="form-control" id="createdBy" name="createdBy" [(ngModel)]="serverTypeDTO.createdBy">
+                <option>Angular</option>
+                <option>Postman</option>
+                <option>Other</option>
+            </select>
+        </div>
+        <button type="button" class="btn btn-primary" name="saveButton" (click)="saveButtonClick()">Save</button>
+        <button type="button" class="btn btn-secondary" name="cancenButton" (click)="cancelButtonClick()">Cancel</button>
+    </form>
+    </div>
+</div>

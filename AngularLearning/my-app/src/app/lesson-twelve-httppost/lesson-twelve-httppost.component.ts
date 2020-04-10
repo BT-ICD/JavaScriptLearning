@@ -36,6 +36,7 @@ export class LessonTwelveHttppostComponent implements OnInit {
   }
   editButtonClick(id: number) {
     console.log('Edit Clicked:' + id);
+    this.router.navigate(['/L14',id]);
   }
   deleteButtonClick(id: number) {
     console.log(`Delete button clicked ${id}`);
