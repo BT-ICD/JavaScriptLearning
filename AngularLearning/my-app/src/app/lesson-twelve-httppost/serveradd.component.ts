@@ -15,6 +15,7 @@ export class ServeraddComponent implements OnInit {
     "name":'',
     "createdBy":""
   };
+ 
   userNames=["Angular","Postman","Other"];
 
   constructor( private serverTypeDataService:ServerTypeDataService, private router:Router) { }
@@ -31,4 +32,5 @@ export class ServeraddComponent implements OnInit {
     //console.log('Save Button Clicked...' + this.serverTypeDTO);
     this.router.navigate(['/L12']);
   }
+  
 }

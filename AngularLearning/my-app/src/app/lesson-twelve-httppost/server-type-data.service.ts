@@ -8,14 +8,20 @@ import { IServerTypeDTOAdd } from './iserver-type-dtoadd';
   providedIn: 'root'
 })
 export class ServerTypeDataService {
-serverTypeListURL:string='http://localhost:7458/Api/ServerType/GetServerTypes';
-serverTypeAddNewURL:string='http://localhost:7458/Api/ServerType/Add';
-serverTypes:IServerType[];
-  constructor(private http:HttpClient) { }
-getServerTypes():Observable<IServerType[]>{
-  return this.http.get<IServerType[]>(this.serverTypeListURL);
-}
-addNewServerType(serverTypeDTOAdd: IServerTypeDTOAdd){
-return this.http.post(this.serverTypeAddNewURL, serverTypeDTOAdd);
-}
+  serverTypeListURL: string = 'http://localhost:7458/Api/ServerType/GetServerTypes';
+  serverTypeAddNewURL: string = 'http://localhost:7458/Api/ServerType/Add';
+  serverTypeDeleteURL: string = 'http://localhost:7458/Api/ServerType/Delete'
+  serverTypes: IServerType[];
+  constructor(private http: HttpClient) { }
+  getServerTypes(): Observable<IServerType[]> {
+    return this.http.get<IServerType[]>(this.serverTypeListURL);
+  }
+  addNewServerType(serverTypeDTOAdd: IServerTypeDTOAdd) {
+    return this.http.post(this.serverTypeAddNewURL, serverTypeDTOAdd);
+  }
+  deleteServerType(id:number){
+    const url=this.serverTypeDeleteURL + "/" + id;
+    return this.http.post(url,null);
+  }
+
 }

@@ -1,16 +1,18 @@
 <div class="card">
     <div class="card-header">
         <h4>Server Type</h4>
-    </div>    
+    </div>
     <div class="card-body">
         <form #serverForm="ngForm">
             <div class="form-group">
                 <label for="serverTypeId">ID</label>
-                <input type="text" name="serverTypeId" id="serverTypeId" class="form-control" placeholder="Server Type Id" [(ngModel)]="serverTypeDTO.serverTypeId"/>
+                <input type="text" name="serverTypeId" id="serverTypeId" class="form-control"
+                    placeholder="Server Type Id" [(ngModel)]="serverTypeDTO.serverTypeId" />
             </div>
             <div class="form-group">
                 <label for="name">Server Type</label>
-                <input type="text" name="name" id="name" class="form-control" placeholder="Server Type Name"   [(ngModel)]="serverTypeDTO.name"/>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Server Type Name"
+                    [(ngModel)]="serverTypeDTO.name" />
             </div>
             <div class="form-group">
                 <label for="createdBy">Created by</label>
@@ -21,11 +23,8 @@
                     <option>Other</option>
                 </select>
             </div>
-            <button class="btn btn-primary" name="saveButton" (click)="saveButtonClick()" >Save</button>
-
-         
+            <button class="btn btn-primary" name="saveButton" (click)="saveButtonClick()">Save</button>
         </form>
-      
     </div>
 </div>
 <p>{{serverForm.value|json}}</p>
