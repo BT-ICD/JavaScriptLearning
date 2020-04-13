@@ -20,6 +20,8 @@ import { LessonElevenTformsoneComponent } from './lesson-eleven-tformsone/lesson
 import { LessonTwelveHttppostComponent } from './lesson-twelve-httppost/lesson-twelve-httppost.component';
 import { ServeraddComponent } from './lesson-twelve-httppost/serveradd.component';
 import { ServereditComponent } from './lesson-twelve-httppost/serveredit.component';
+import { ServerComponent } from './server/server.component';
+import { ServerModule } from './server/server.module';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { ServereditComponent } from './lesson-twelve-httppost/serveredit.compone
     LessonElevenTformsoneComponent,
     LessonTwelveHttppostComponent,
     ServeraddComponent,
-    ServereditComponent
+    ServereditComponent,
+    // ServerComponent
     
   ],
   imports: [
@@ -62,10 +65,12 @@ import { ServereditComponent } from './lesson-twelve-httppost/serveredit.compone
         {path:'L12',component:LessonTwelveHttppostComponent},
         {path:'L13', component:ServeraddComponent},
         {path:'L14/:id', component:ServereditComponent},
+        {path:'server',component:ServerComponent},
         {path:'Home',component:AdditionComponent},
         {path:'',redirectTo:'Home',pathMatch:'full'},
         {path:'**',redirectTo:'Home',pathMatch:'full'}
-    ])
+    ]),
+    ServerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -38,4 +38,7 @@ export class LessonSevenHttpStudentComponent implements OnInit {
   openL12HttpComponent() {
     this.router.navigate(['/L12']);
   }
+  serverButtonClick(){
+    this.router.navigate(['/server']);
+  }
 }

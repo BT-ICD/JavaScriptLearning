@@ -1,0 +1,34 @@
+<div class="card">
+    <div class="card-header">
+        Server
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <button type="button" class="btn btn-primary" (click)="addNewButtonClick()" name="addNewButton">Add New</button>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <div class="table" *ngIf="serverList">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Id</td>
+                            <td>Name</td>
+                            <td>Type</td>
+                            <td>Notes</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let serverObj of serverList">
+                            <td>{{serverObj.serverId}}</td>
+                            <td>{{serverObj.serverName}}</td>
+                            <td>{{serverObj.serverTypeName}}</td>
+                            <td>{{serverObj.notes}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
