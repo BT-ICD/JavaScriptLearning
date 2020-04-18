@@ -18,9 +18,11 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     FormsModule,
     RouterModule.forChild([
-      {path:'serverlist', component:ServerComponent},
-      {path:'serveradd',component:ServeraddComponent},
-      {path:'serveredit',component:ServereditComponent}
+      {path:'servers', component:ServerComponent},
+      {path:'servers/add',component:ServeraddComponent},
+      {path:'servers/:id/edit',component:ServereditComponent}
+
+      
     ])
   ]
 })

@@ -1,1 +1,40 @@
-<p>serveradd works!</p>
+<div class="card">
+    <div class="card-header">
+        <h4>Server</h4>
+    </div>
+    <div class="card-body">
+        <form #serverForm="ngForm">
+            <div class="form-group">    
+                <label for="serverName">Name</label>
+                <input type="text" class="form-control" name="serverName" id="serverName" placeholder="Server Name" [(ngModel)]="serverAdd.serverName" />
+            </div>      
+            <div class="form-group">
+                <label for="serverTypeId">Type</label>
+                <select class="form-control" id="serverTypeId" name="serverTypeId" [(ngModel)]="serverAdd.serverTypeId">
+                    <option *ngFor="let serverType of serverTypeLOV" value={{serverType.serverTypeId}} >{{serverType.name}}</option>
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="internalIP">Internal IP</label>
+                <input type="text" id="internalIP" name="internalIP" class="form-control" [(ngModel)]="serverAdd.internalIP" placeholder="Internal IP Address"/>
+            </div>
+            <div class="form-group">
+                <label>External IP</label>
+                <input type="text" class="form-control" id="externalIP" name="externalIP"  [(ngModel)] ="serverAdd.externalIP" placeholder="External IP Address"/>
+            </div>
+            <div class="form-group">
+                <label for="urlToAccess">URL to access</label>
+                <input type="text" class="form-control" id="urlToAccess" name="urlToAccess"   [(ngModel)]="serverAdd.urlToAccess" placeholder="URl to access"  />
+            </div>
+            <div class="form-group">
+                <label for="notes">Notes</label>
+                <input  type="text" class="form-control" id="notes" name="notes" [(ngModel)]="serverAdd.notes" placeholder="Notes" />
+            </div>
+            <div class="form-group">
+                <button type="button" name="saveButton" (click)="saveButtonClick()" class="btn btn-primary">Save</button>
+                <button type="button" name="cancelButton" [routerLink]="['/servers']" class="btn btn-primary">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>

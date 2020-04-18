@@ -1,1 +1,42 @@
-<p>serveredit works!</p>
+<div class="card">
+    <div class="card-header">
+        <h4>Server</h4>
+    </div>
+    <div class="card-body" *ngIf="serverEdit">
+        <form #serverForm="ngForm">
+            <div class="form-group">
+                <input type="text" class="form-control" name="serverId" id="serverId" [(ngModel)]="serverEdit.serverId" readonly />
+            </div>
+            <div class="form-group">
+                <label for="serverName">Name</label>
+                <input  type="text" class="form-control" name="serverName" id="serverName"  [(ngModel)]="serverEdit.serverName" />
+            </div>
+            <div class="form-group">
+                <label for="serverTypeId">Type</label>
+                <select class="form-control" id="serverTypeId" name="serverTypeId" [(ngModel)]="serverEdit.serverTypeId">
+                    <option *ngFor="let serverTypeLOVObj of serverTypeLOV" value={{serverTypeLOVObj.serverTypeId}} >{{serverTypeLOVObj.name}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="internalIP">Internal IP</label>
+                <input type="text" class="form-control" name="internalIP" id="internalIP" [(ngModel)]="serverEdit.internalIP"/>
+            </div>
+            <div class="form-group">
+                <label for="externalIP">External IP</label>
+                <input type="text" class="form-control" name="externalIP" id="externalIP" [(ngModel)]="serverEdit.externalIP"/>
+            </div>
+            <div class="form-group">
+                <label for="urlToAccess">URL</label>
+                <input type="text" class="form-control" name="urlToAccess" id="urlToAccess" [(ngModel)]="serverEdit.urlToAccess"/>
+            </div>
+            <div class="form-group">
+                <label for="notes">Notes</label>
+                <input type="text" class="form-control" name="notes" id="notes" [(ngModel)]="serverEdit.notes"/>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary mr-3" (click)="saveButtonClick()" name="saveButton">Save</button>
+                <button type="button" class="btn btn-primary " [routerLink]="['/servers']">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>

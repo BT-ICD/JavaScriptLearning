@@ -60,7 +60,7 @@ export class LessonTwelveHttppostComponent implements OnInit, OnDestroy {
     this.router.navigate(['/L14', id]);
   }
   deleteButtonClick(id: number) {
-    console.log(`Delete button clicked ${id}`);
+    //console.log(`Delete button clicked ${id}`);
     this.serverTypeDataService.deleteServerType(id).subscribe({
       next: data => {
         console.log(data);

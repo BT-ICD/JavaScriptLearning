@@ -17,6 +17,7 @@
                             <td>Name</td>
                             <td>Type</td>
                             <td>Notes</td>
+                            <td>Edit</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -25,9 +26,33 @@
                             <td>{{serverObj.serverName}}</td>
                             <td>{{serverObj.serverTypeName}}</td>
                             <td>{{serverObj.notes}}</td>
+                            <td><button type="button" class="btn btn-outline-primary btn-sm" [routerLink]="['/servers',serverObj.serverId,'edit']">Edit</button></td>
+                            <td><button type="button" class="btn btn-outline-primary btn-sm" (click)="showDeleteModal(serverObj.serverId)">Delete</button></td>
                         </tr>
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- To Open Modal -->
+<div class="modal" id="myModal" [style.display]="showModal? 'block': 'none'">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- modal - header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Delete Server Type</h4>
+                <button type="button" class="close" data-dismiss="modal" (click)="hideModal()">&times;</button>
+            </div>
+            <!-- modal - body -->
+            <div class="modal-body">
+                <p>You are about to delete record. {{selectedServerId}}</p>
+                <p>Are you sure?</p>
+            </div>
+            <!-- modal - footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" (click)="deleteButtonClick(selectedServerId)">Yes</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="hideModal()">No</button>
             </div>
         </div>
     </div>

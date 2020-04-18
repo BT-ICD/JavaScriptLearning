@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IServerType } from './iserver-type';
 import { Observable } from 'rxjs';
-import { IServerTypeDTOAdd } from './iserver-type-dtoadd';
+import { IServerTypeDTOAdd, IServerTypeDTOLOV } from './iserver-type-dtoadd';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +13,8 @@ export class ServerTypeDataService {
   serverTypeDeleteURL: string = 'http://localhost:7458/Api/ServerType/Delete';
   serverTypeGetByIdURL:string='http://localhost:7458/Api/ServerType/GetServerTypeById';
   serverTypeUpdateURL:string='http://localhost:7458/Api/ServerType/Update';
+  serverTypeLOVURL:string='http://localhost:7458/Api/ServerType/GetServerTypeLOV';
+
   serverTypes: IServerType[];
   constructor(private http: HttpClient) { }
   getServerTypes(): Observable<IServerType[]> {
@@ -31,6 +33,9 @@ export class ServerTypeDataService {
   deleteServerType(id:number){
     const url=this.serverTypeDeleteURL + "/" + id;
     return this.http.post(url,null);
+  }
+  getServerTypeForLOV(){
+    return this.http.get<IServerTypeDTOLOV[]>(this.serverTypeLOVURL);
   }
 
 }

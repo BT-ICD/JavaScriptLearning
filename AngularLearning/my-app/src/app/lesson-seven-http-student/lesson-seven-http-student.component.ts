@@ -39,6 +39,6 @@ export class LessonSevenHttpStudentComponent implements OnInit {
     this.router.navigate(['/L12']);
   }
   serverButtonClick(){
-    this.router.navigate(['/server']);
+    this.router.navigate(['/servers']);
   }
 }

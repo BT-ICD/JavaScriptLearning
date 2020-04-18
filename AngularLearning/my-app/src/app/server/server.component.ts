@@ -9,7 +9,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./server.component.css']
 })
 export class ServerComponent implements OnInit {
-serverList:IServerList[];
+  serverList: IServerList[];
+  showModal: boolean;
+  selectedServerId: number;
   constructor(private serverDataService: ServerDataService, private router: Router) { }
 
   ngOnInit(): void {
@@ -20,7 +22,27 @@ serverList:IServerList[];
       next: data => this.serverList = data
     });
   }
-  addNewButtonClick(){
-this.router.navigate(['/serveradd'])   ;
+  addNewButtonClick() {
+    this.router.navigate(['/servers/add']);
   }
+  showDeleteModal(id: number) {
+    console.log('Delete button clicked ' + id);
+    this.selectedServerId = id;
+    this.showModal = true;
+  }
+  deleteButtonClick(id:number){
+    console.log('Confirmed delete');
+    this.serverDataService.deleteServer(id).subscribe({
+      next:data=>{
+        console.log(data);
+        this.loadServerList();
+      }
+    })
+    this.showModal = false;
+  }
+  hideModal() {
+    this.showModal = false;
+    this.selectedServerId = 0;
+  }
+
 }
