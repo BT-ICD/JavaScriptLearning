@@ -1,0 +1,33 @@
+<div class="card">
+    <div class="card-header">
+        <h4>Project</h4>
+    </div>
+    <div class="card-body">
+        <form #projectForm="ngForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" name="name" id="name" placeholder="Project Name"
+                    [(ngModel)]="projectAdd.name" />
+            </div>
+            <div class="form-group">
+                <label for="about">About</label>
+                <input type="text" class="form-control" name="about" id="about" placeholder="About Project"
+                    [(ngModel)]="projectAdd.about" />
+            </div>
+            <div class="form-group">
+                <label for="notes">Notes</label>
+                <textarea rows="3" class="form-control" name="notes" id="notes" placeholder="notes"
+                    [(ngModel)]="projectAdd.notes"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="sourceCodeLocation">Code Location</label>
+                <input type="text" class="form-control" name="sourceCodeLocation" id="sourceCodeLocation"
+                    placeholder="Source code locaiton" [(ngModel)]="projectAdd.sourceCodeLocation" />
+            </div>
+            <button type="button" name="saveButton" (click)="saveButtonClick()"
+                class="btn btn-primary mr-3">Save</button>
+            <button type="button" name="cancelButton" [routerLink]="['/projects']"
+                class="btn btn-primary">Cancel</button>
+        </form>
+    </div>
+</div>

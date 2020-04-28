@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "TypeScriptLearning"
+		},
+		{
+			"name": "TypeScriptLearning",
+			"path": "TypeScriptLearning\\TypeScriptLearning"
+		}
+	],
+	"settings": {}
+}

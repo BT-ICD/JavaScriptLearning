@@ -31,7 +31,9 @@
     </div>
 </div>
 <div class="row">
-<button type="button" class="btn btn-primary" (click)="openL8HttpComponent()">Http Example using Web API </button>
-<button type="button" class="btn btn-primary" (click)="openL12HttpComponent()">Http Example to get&post</button>
-<button  type="button" class="btn btn-primary" (click)="serverButtonClick()" name="serverButton">Server</button>
+    <button type="button" class="btn btn-primary" (click)="openL8HttpComponent()">Http Example using Web API </button>
+    <button type="button" class="btn btn-primary" (click)="openL12HttpComponent()">Http Example to get&post</button>
+    <button type="button" class="btn btn-primary" (click)="serverButtonClick()" name="serverButton">Server</button>
+    <button type="button" class="btn btn-primary" [routerLink]="['/projects']">Project</button>
+    <button type="button" class="btn btn-primary" [routerLink]="['/adminlist']">AdminList</button>
 </div>

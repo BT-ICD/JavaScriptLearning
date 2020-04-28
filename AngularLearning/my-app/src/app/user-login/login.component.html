@@ -1,0 +1,19 @@
+<div class="card">
+    <div class="card-header">
+        <h4>Login</h4>
+    </div>
+    <div class="card-body">
+        <div class="form-group">
+            <label for="username">User Id</label>
+            <input type="text" class="form-control" id="username" name="username" [(ngModel)]="user.username" placeholder="User Id" />
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password" [(ngModel)]="user.password" placeholder="password" />
+        </div>
+        <div class="form-group">
+
+            <button name="loginButton" id="loginButton" class="btn btn-primary" (click)="loginButtonClick()">Login</button>
+        </div>
+    </div>
+</div>

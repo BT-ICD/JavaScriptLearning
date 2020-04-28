@@ -22,6 +22,10 @@ import { ServeraddComponent } from './lesson-twelve-httppost/serveradd.component
 import { ServereditComponent } from './lesson-twelve-httppost/serveredit.component';
 import { ServerComponent } from './server/server.component';
 import { ServerModule } from './server/server.module';
+import { ProjectModule } from './projectdetails/project.module';
+import { AdminPageModule } from './admin-page/admin-page.module';
+import { UserLoginModule } from './user-login/user-login.module';
+
 
 @NgModule({
   declarations: [
@@ -42,6 +46,7 @@ import { ServerModule } from './server/server.module';
     LessonTwelveHttppostComponent,
     ServeraddComponent,
     ServereditComponent,
+    
     // ServerComponent
     
   ],
@@ -70,7 +75,12 @@ import { ServerModule } from './server/server.module';
         {path:'',redirectTo:'Home',pathMatch:'full'},
         {path:'**',redirectTo:'Home',pathMatch:'full'}
     ]),
-    ServerModule
+    ServerModule,
+    ProjectModule,
+    AdminPageModule,
+    UserLoginModule
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
