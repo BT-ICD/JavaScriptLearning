@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="form-group row">
+        <label for="fName" class="col-sm-2 col-form-label">First Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="firstName" name="firstName" value={{fName}}/>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="mName" class="col-sm-2 col-form-label">First Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="mName" name="mName" value={{mName}}/>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="lName" class="col-sm-2 col-form-label">First Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="lName" name="lName" value={{lName}} />
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="button" name="submitButton" class="btn btn-primary btn-sm mr-3" (click)="onSubmitButtonClick()">Submit</button>
+        <button type="button" name="clearButton" class="btn btn-primary btn-sm" (click)="onClearButtonClick()">Clear</button>
+    </div>
+    <p>
+        {{firstNameChangeMessage}}
+    </p>
+</div>

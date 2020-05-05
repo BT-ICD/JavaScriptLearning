@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
                 <input type="button" id="additionButton" name="additionButton" value="Addition"  (click)="onAddButtonClick(val1.value,val2.value)"/>
                 <input type="button" id="clearButton" name="clearButton"  value="Clear"/><br>
                 <input type="text" id="answerTextbox" name="answerTextbox"   >
+                
                 `
 })
 export class AdditionComponent implements OnInit {

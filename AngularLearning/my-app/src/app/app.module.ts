@@ -25,6 +25,8 @@ import { ServerModule } from './server/server.module';
 import { ProjectModule } from './projectdetails/project.module';
 import { AdminPageModule } from './admin-page/admin-page.module';
 import { UserLoginModule } from './user-login/user-login.module';
+import { ParentDemoComponent } from './parent-demo/parent-demo.component';
+import { ChildFullNameComponent } from './child-full-name/child-full-name.component';
 
 
 @NgModule({
@@ -46,6 +48,8 @@ import { UserLoginModule } from './user-login/user-login.module';
     LessonTwelveHttppostComponent,
     ServeraddComponent,
     ServereditComponent,
+    ParentDemoComponent,
+    ChildFullNameComponent
     
     // ServerComponent
     
@@ -72,6 +76,7 @@ import { UserLoginModule } from './user-login/user-login.module';
         {path:'L14/:id', component:ServereditComponent},
         {path:'server',component:ServerComponent},
         {path:'Home',component:AdditionComponent},
+        {path:'parentchild', component:ParentDemoComponent},
         {path:'',redirectTo:'Home',pathMatch:'full'},
         {path:'**',redirectTo:'Home',pathMatch:'full'}
     ]),

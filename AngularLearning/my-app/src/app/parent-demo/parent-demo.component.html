@@ -1,0 +1,33 @@
+<div class="card">
+    <div class="card-header">
+        <h4>
+            Communication between components (Parent - Child)
+        </h4>
+    </div>
+    <div class="card-body">
+        <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" class="form-control" id="fullName" name="fullName"  placeholder="full name"/>
+        </div>
+    </div>
+    <div class="container">
+        <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" class="form-control" id="fname" name="fname" [(ngModel)]="fNameFromParent">
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-primary mr-3" (click)="onFirstNameSubmitClick()">Submit First Name</button>
+            <button type="button" class="btn btn-primary" (click)="getChildComponentProperty(childNameCmp.mName)">Access child property</button>
+            <input type="text" [(ngModel)]="fullNameFromChild">
+        </div>
+        
+    </div>
+    
+</div>
+<!-- options to initialize property value from parent component to child component -->
+<!-- <app-child-full-name fName="Hello" ></app-child-full-name> -->
+<!-- onFullNameChange($event) - event to get notification from child component when full name changed -->
+<!-- (fullNameChange)="onFullNameChange($event)" -->
+<app-child-full-name [fName]="fNameFromParent"  [mName]="mNameFromParent" [lName]="lNameFromParent" #childNameCmp >
+
+</app-child-full-name>
