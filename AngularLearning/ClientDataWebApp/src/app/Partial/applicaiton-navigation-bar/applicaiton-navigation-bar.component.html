@@ -13,17 +13,21 @@
         <!-- Step 4: Close the menu when a link is clicked. -->
         <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true"></a>
       </li>
+      <li>
+        <a class="nav-link" [routerLink]="['/home']" (click)="isMenuCollapsed = true">Home</a>
+      </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">Examples</a>
+        <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">Example</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">About</a>
       </li>
+     
     </ul>
     <div ngbDropdown class="d-inline-block">
       <button class="btn"  ngbDropdownToggle>Master</button>
       <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <button ngbDropdownItem>Server Type</button>
+        <button ngbDropdownItem [routerLink]="['/servertype']" (click)="isMenuCollapsed = true" >Server Type</button>
         <button ngbDropdownItem>Server</button>
       </div>
     </div>

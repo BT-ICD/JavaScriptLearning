@@ -11,5 +11,5 @@ export class ApplicaitonNavigationBarComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+ 
 }
