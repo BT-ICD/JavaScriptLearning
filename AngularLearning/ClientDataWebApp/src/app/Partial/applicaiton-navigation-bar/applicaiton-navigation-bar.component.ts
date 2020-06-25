@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/user-login/auth.service';
 
 @Component({
   selector: 'app-applicaiton-navigation-bar',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApplicaitonNavigationBarComponent implements OnInit {
   public isMenuCollapsed = true;
-  constructor() { }
+  
+  constructor(public authService: AuthService) { }
 
   ngOnInit(): void {
+  }
+  get isLoggedIn():Boolean{
+    return this.authService.isLoggedIn;
+  }
+  logout(){
+    this.authService.userToken=null;
+    this.isMenuCollapsed = true;
+    console.log('logout');
   }
  
 }

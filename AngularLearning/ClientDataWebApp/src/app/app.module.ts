@@ -2,6 +2,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 // Third Party Modules
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap'
 
@@ -11,12 +13,16 @@ import { AppComponent } from './app.component';
 import { ApplicaitonNavigationBarComponent } from './Partial/applicaiton-navigation-bar/applicaiton-navigation-bar.component';
 import { HomeModule } from './home/home.module';
 import { ServerTypeModule } from './MasterComponents/ServerType/server-type.module';
-import { FormsModule } from '@angular/forms';
+import { ServerDetailModule } from './MasterComponents/ServerDetail/server-detail.module';
+import { UserLoginModule } from './user-login/user-login.module';
+import { ProjectModule } from './MasterComponents/project/project.module';
+import { ProjectDocumentsModule } from './MasterComponents/Project/project-documents/project-documents.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ApplicaitonNavigationBarComponent
+    ApplicaitonNavigationBarComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -25,7 +31,12 @@ import { FormsModule } from '@angular/forms';
     HomeModule,
     NgbModule,
     ServerTypeModule,
+    ServerDetailModule,
+    UserLoginModule,
+    ProjectModule,
+    ProjectDocumentsModule,
     AppRoutingModule
+    
 
   ],
   providers: [],

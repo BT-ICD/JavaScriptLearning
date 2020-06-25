@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ServerTypeEditComponent } from './server-type-edit.component';
+import { ProjectDocumentAddComponent } from './project-document-add.component';
 
-describe('ServerTypeEditComponent', () => {
-  let component: ServerTypeEditComponent;
-  let fixture: ComponentFixture<ServerTypeEditComponent>;
+describe('ProjectDocumentAddComponent', () => {
+  let component: ProjectDocumentAddComponent;
+  let fixture: ComponentFixture<ProjectDocumentAddComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ServerTypeEditComponent ]
+      declarations: [ ProjectDocumentAddComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ServerTypeEditComponent);
+    fixture = TestBed.createComponent(ProjectDocumentAddComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

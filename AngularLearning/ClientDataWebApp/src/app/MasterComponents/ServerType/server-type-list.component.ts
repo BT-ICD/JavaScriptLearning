@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { IServerTypeDTODetail } from './iserver-type';
 import { ActivatedRoute, Router, RouterEvent, NavigationEnd } from '@angular/router';
 import { ServerTypeDataService } from './server-type-data.service';
-import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-server-type-list',
