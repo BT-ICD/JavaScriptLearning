@@ -1,0 +1,14 @@
+<div class="container">
+        <div class="row">
+                <label>First</label>
+                <input type="text" class="ml-2" name="firstName" [(ngModel)]="firstName" />
+                <label class="ml-2">Middle</label>
+                <input  class="ml-2" type="text" name="middleName" [(ngModel)]="middleName" />
+                <label class="ml-2">Last</label>
+                <input  class="ml-2" type="text" name="lastName" [(ngModel)]="lastName" />
+    </div>
+    <div class="row">
+           Full Name: {{getFullName()}}
+    </div>
+    
+</div>

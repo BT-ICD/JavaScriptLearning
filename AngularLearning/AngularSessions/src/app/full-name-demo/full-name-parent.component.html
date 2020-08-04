@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <p>full-name-parent works - Need to understand module with routing!</p>
+    </div>
+    <div class="row">
+        first Name: <input type="text" [(ngModel)]="firstName" >
+    </div>
+    <div class="row">
+        <app-full-name-child [firstName]='firstName ' middleName='Component' lastName='Communication'
+            (nameChanged)='childNameChanged($event)'
+            >
+        </app-full-name-child>
+    </div>
+    <div class="row">
+    <button type="button" class="btn btn-primary btn-sm" name="getFullName" (click)="fullNameButtonClick()">Full name</button>  
+    <button type="button" class="btn btn-primary btn-sm" name="clearName" (click)="clearNameButtonClick()">Clear</button>  
+          
+    </div>
+    
+</div>
