@@ -6,7 +6,7 @@
         first Name: <input type="text" [(ngModel)]="firstName" >
     </div>
     <div class="row">
-        <app-full-name-child [firstName]='firstName ' middleName='Component' lastName='Communication'
+        <app-full-name-child [firstName]='firstName' middleName='Component' lastName='Communication'
             (nameChanged)='childNameChanged($event)'
             >
         </app-full-name-child>
