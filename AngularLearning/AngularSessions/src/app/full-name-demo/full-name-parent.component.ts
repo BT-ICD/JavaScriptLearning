@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { FullNameChildComponent } from './full-name-child.component';
 
 @Component({
@@ -7,7 +7,7 @@ import { FullNameChildComponent } from './full-name-child.component';
   styleUrls: ['./full-name-parent.component.css']
 })
 export class FullNameParentComponent implements OnInit {
-firstName:string;
+@Input() firstName:string;
 @ViewChild(FullNameChildComponent) childname:FullNameChildComponent
   constructor() { }
 
@@ -33,4 +33,5 @@ firstName:string;
   childNameChanged(data:string):void{
     console.log('childNameChanged: ' + data );
   }
+ 
 }

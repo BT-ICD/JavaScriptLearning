@@ -15,6 +15,8 @@ import {FullNameParentComponent} from './full-name-parent.component'
     RouterModule.forChild([
       {path:'fullname', component:FullNameParentComponent}
     ])
-  ]
+  ],
+  exports:[FullNameParentComponent, FullNameChildComponent]
+ 
 })
 export class FullnameModule { }

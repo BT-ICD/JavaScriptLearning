@@ -1,8 +1,18 @@
-<div class="container">
-    <div class="row">
-        <h1>Hello world</h1>
+<div class="card">
+    <div class="card-header">
+        <div class="card-title">
+            ViewChild - to access element using template reference variable
+            <ul>
+                <li>provides a nativeElement property</li>
+                <li>Access any HTML element properties</li>
+                <li>Call any HTML element methods</li>
+                <li>ViewChild reference not reliably available until AfterViewInit</li>
+                <li>ViewChild reference not available if the element is not in the DOM</li>
+                <li>Could cause a security concern, especially with innerHTML</li>
+            </ul>
+        </div>
     </div>
-    <div class="row">
+    <div class="card-body">
         country:
         <input name="countryName" type="text" #countryName>
         <button type="button" name="countryButton" (click)="countryButtonClick()">Update country</button>

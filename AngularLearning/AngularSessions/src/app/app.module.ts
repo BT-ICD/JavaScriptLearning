@@ -29,6 +29,7 @@ import { ViewChildDemoModule } from './view-child-demo/view-child-demo.module';
     ViewChildDemoModule,
     AppRoutingModule
   ],
+  exports:[],
   providers: [],
   bootstrap: [AppComponent]
 })

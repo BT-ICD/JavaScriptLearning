@@ -1,0 +1,16 @@
+<div class="card">
+    <div class="card-header">
+        Viewchild demo to access Component
+        <div class="card-title">
+            To access component from another module, 1. have to import that module, 2. Export required component into export array of parent moduel where component is declared
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <app-full-name-parent  firstName='ABCD'></app-full-name-parent>
+        </div>
+        <div class="row mt-2">
+            <button type="button" class="btn btn-primary btn-sm" (click)="changeFirstName()">Change Name</button>
+        </div>
+    </div>
+</div>
