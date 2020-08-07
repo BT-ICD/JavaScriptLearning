@@ -1,0 +1,43 @@
+<div class="card">
+    <div class="card-header">
+        ViewChildren to access all the elements having ngModel 
+    </div>
+    <div class="card-body">
+        <div class="card-title">
+            <ul>
+                <li>The return type of ViewChildren is QueryList</li>
+                <li>first: Returns the first item in the list</li>
+                <li>last: Returns the last item in the list</li>
+                <li>length: Returns the length of items (number of elements)</li>
+            </ul>
+            <p>About ValueChanges Observable</p>
+            <p>The ValueChanges returns Observable. ValueChanges emits an event every time when value of form control change. Emits an event every time
+                the value of the control changes, in the UI </p>
+        </div>
+        <div class="row">
+            <label class="col-md-2" for="firstName">First Name</label>
+            <input type="text" name="firstName" [(ngModel)]="firstName" />
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <label for="age">Age</label>
+            </div>
+            <input type="text" name="age" [(ngModel)]="age" />
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <label>Designation</label>
+            </div>
+            <select [(ngModel)]="designation" name="designation" >
+                <option *ngFor="let d of designations" [ngValue]="d">
+                    {{d}}
+                </option>
+            </select>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <button type="button" class="btn btn-primary btn-sm" name="okButton" (click)="okButtonClick()">Elements having ngModel</button>
+            </div>
+        </div>
+    </div>
+</div>
