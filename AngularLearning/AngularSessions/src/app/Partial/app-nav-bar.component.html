@@ -32,6 +32,12 @@
 
             </div>
           </div>
+          <div ngbDropdown class="d-inline-block">
+            <button class="btn"  ngbDropdownToggle>Lazy Load</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button ngbDropdownItem [routerLink]="['/products']" (click)="isMenuCollapsed = true">Products</button>
+            </div>
+          </div>
       <div ngbDropdown class="d-inline-block">
         <button class="btn"  ngbDropdownToggle>Component</button>
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
